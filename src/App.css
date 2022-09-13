@@ -1,38 +1,142 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;600;700;800;900&display=swap');#form { background: rgba(0, 0, 0, 0.15); padding: 0.25rem; position: fixed; bottom: 0; left: 0; right: 0; display: flex; height: 3rem; box-sizing: border-box; backdrop-filter: blur(10px); }
+#input { border: none; padding: 0 1rem; flex-grow: 1; border-radius: 2rem; margin: 0.25rem; }
+#input:focus { outline: none; }
+#form > button { background: #333; border: none; padding: 0 1rem; margin: 0.25rem; border-radius: 3px; outline: none; color: #fff; }
+
+#messages { list-style-type: none; margin: 0; padding: 0; }
+#messages > li { padding: 0.5rem 1rem; }
+#messages > li:nth-child(odd) { background: #efefef; }
+
+body {
+    background-color: #e7fafa;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.form-name {
+    background-color: white;
+    width: 95%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 -1px 4px 0 rgba(26,26,26,.08),0 4px 8px 0 rgba(26,26,26,.12);
+    margin: 100px auto;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.form-name > h2 {
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 500;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.form-name > form {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+.input-name {
+    background: transparent none repeat scroll 0% 0%;
+    border-radius: 4px;
+    color: rgb(26, 26, 26);
+    height: 100%;
+    font-size: 20px;
+    padding: 5px;
+    margin: 0 auto;
+    width: 70%;
+    border: 1px solid rgb(202, 209, 217);
 }
 
-.App-link {
-  color: #61dafb;
+.btn {
+    background-color: #40a8fd;
+    border-radius: 4px;
+    color: #fff;
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+    padding: 7px;
+    border: none;
+    width: 70%;
+    margin: 20px auto;
+    cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card {
+    background-color: white;
+    width: 95%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 -1px 4px 0 rgba(26,26,26,.08),0 4px 8px 0 rgba(26,26,26,.12);
+    margin: 70px auto;
+}
+.card h1 {
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 500;
+}
+.messages {
+    width: 90%;
+    height: 45vh;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+.messages::-webkit-scrollbar {
+    display: none;
+}
+
+.message {
+    max-width: 238px;
+    width: 45%;
+    padding: 4px;
+    border-radius: 5px;
+    margin: 3px;
+}
+.receive {
+    background-color: #eeeeee;
+}
+.sent {
+    background-color: #40a8fd;
+    margin-left: 65%;
+    color: white;
+}
+.send-message {
+    width: 70%;
+    min-width: 200px;
+    margin: 5px auto;
+    display: flex;
+    align-items: center;
+}
+.send-message input[type="text"] {
+    background: transparent none repeat scroll 0% 0%;
+    border-radius: 4px;
+    color: rgb(26, 26, 26);
+    height: 100%;
+    font-size: 15px;
+    margin: 0 auto;
+    padding: 3px;
+    width: 250px;
+    border: 1px solid rgb(202, 209, 217);
+}
+.send-message input[type="text"]:focus {
+    outline: none;
+}
+
+.send-message input[type="submit"] {
+    background-color: #40a8fd;
+    border-radius: 4px;
+    color: #fff;
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+    padding: 7px;
+    border: none;
+    width: 150px;
+    cursor: pointer;
 }
